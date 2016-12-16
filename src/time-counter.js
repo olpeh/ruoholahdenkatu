@@ -12,6 +12,7 @@ Cycle.registerCustomElement('time-counter', (user, properties) => {
         (_, movingEnds) => {
           let now = moment();
           let duration = moment.duration(movingEnds.diff(now));
+          let monthsLeft = duration.months();
           let daysLeft = duration.days();
           let hoursLeft = duration.hours();
           let minutesLeft = duration.minutes();
@@ -23,7 +24,8 @@ Cycle.registerCustomElement('time-counter', (user, properties) => {
           if (msLeft.length >= 4) {
             msLeft = '999';
           }
-          return `${daysLeft > 0 ? daysLeft + ' days, ' : ''}
+          return `${monthsLeft > 0 ? monthsLeft + ' month, ' : ''}
+                  ${daysLeft > 0 ? daysLeft + ' days, ' : ''}
                   ${hoursLeft > 0 ? hoursLeft + ' hours, ' : ''}
                   ${minutesLeft > 0 ? minutesLeft + ' minutes, ' : ''}
                   ${secondsLeft > 0 ? secondsLeft + ' seconds, ' : ''}
