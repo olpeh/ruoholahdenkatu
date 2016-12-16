@@ -104,7 +104,7 @@ let view = Cycle.createView(model => {
     ]);
   }
 
-  function renderDeckClearingVideo() {
+  function redirectToStreetView() {
     return window.location = 'https://www.google.fi/maps/place/mcare+Kamppi/@60.1660146,24.9284019,3a,75y,111.85h,100.05t/am=t/data=!3m7!1e1!3m5!1sEIDzYA0H8I9bwbPgsl7W-g!2e0!6s%2F%2Fgeo0.ggpht.com%2Fcbk%3Fpanoid%3DEIDzYA0H8I9bwbPgsl7W-g%26output%3Dthumbnail%26cb_client%3Dsearch.TACTILE.gps%26thumb%3D2%26w%3D234%26h%3D106%26yaw%3D110.015015%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656!4m22!1m16!4m15!1m6!1m2!1s0x46920bca4af717c5:0x6f108d3234e6e6eb!2sBulevardi+7,+Helsinki!2m2!1d24.9382727!2d60.1650447!1m6!1m2!1s0x46920a353653936d:0x345e18617bb1a2d8!2sRuoholahdenkatu+8,+00101+Helsinki!2m2!1d24.9286804!2d60.1657893!3e1!3m4!1s0x0:0xfa6e17dde646c250!8m2!3d60.1659101!4d24.9287738!6m1!1e1';
   }
 
@@ -132,7 +132,7 @@ let view = Cycle.createView(model => {
       model.get('movingEnds$'),
       model.get('showStreetView$'),
       (progress, floatProgress, movingEnds, showStreetView) =>
-        showStreetView ? renderDeckClearingVideo() :
+        showStreetView ? redirectToStreetView() :
           h('div', [
             new OfficesMap(floatProgress / 100.0),
             h('div', {style: progressBoxContainerStyle}, [
