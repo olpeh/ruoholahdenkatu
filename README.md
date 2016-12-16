@@ -1,4 +1,8 @@
-The new deck-clearing chilicorn hotness of the futuyear 2015
+Codaone Oy is moving to new office in february
 --------
+
+Forked from [staltz/annankatu](https://github.com/staltz/annankatu)
+
+Install dependencies with `yarn install`
 
 Compile with `npm run build`
