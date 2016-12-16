@@ -189,7 +189,7 @@ class OfficesMap {
     });
 
     google.maps.event.addListener(marker2, 'click', () =>
-      window.location.href = 'http://www.codaone.fi'
+      window.location.href = 'https://www.codaone.fi'
     );
 
     this.update(null, element);
