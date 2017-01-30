@@ -17,7 +17,7 @@ function mergeStyles(...styleObjects) {
 
 let model = Cycle.createModel(() => {
   let movingStarts = moment('2016-12-15 13:10');
-  let movingEnds = moment('2017-02-15 12:00');
+  let movingEnds = moment('2017-02-20 12:00');
   if (moment().isAfter(movingEnds)) {
     movingStarts = moment().add(1, 'seconds');
     movingEnds = moment().add(10, 'seconds');
